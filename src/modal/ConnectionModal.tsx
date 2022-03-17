@@ -18,7 +18,7 @@ import { SSOLoginButton } from '../component/sso/SSOLoginButton';
  * Configures setting the current Neo4j database connection for the dashboard.
  */
 export default function NeoConnectionModal({ open, standalone, standaloneSettings, ssoSettings, connection, 
-    dismissable = false, createConnection, onConnectionModalClose, onSSOAttempt }) {
+    dismissable = false, createConnection, onConnectionModalClose, onSSOAttempt}) {
 
     const protocols = ["neo4j", "neo4j+s", "neo4j+ssc", "bolt", "bolt+s", "bolt+ssc"]
     const [ssoVisible, setSsoVisible] = React.useState(ssoSettings['ssoEnabled']);
@@ -43,11 +43,14 @@ export default function NeoConnectionModal({ open, standalone, standaloneSetting
         setSsoVisible(ssoSettings['ssoEnabled'])
     }, [JSON.stringify(ssoSettings)])
 
-    const discoveryAPIUrl = ssoSettings && ssoSettings.ssoDiscoveryUrl; 
-   
+    const discoveryAPIUrl = ssoSettings && ssoSettings.ssoDiscoveryUrl;
+
+
+
     return (
+
         <div>
-           
+
             <Dialog maxWidth="xs" open={open == true} onClose={() => { dismissable ? onConnectionModalClose() : null }} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">{standalone ? "Connect to Dashboard" : "Connect to Neo4j"}
                     <IconButton style={{ padding: "3px", float: "right" }}>
@@ -120,7 +123,7 @@ export default function NeoConnectionModal({ open, standalone, standaloneSetting
                             />}
                             label="Use SSO"></FormControlLabel> : <></>}
                         {ssoVisible ? <SSOLoginButton discoveryAPIUrl={discoveryAPIUrl} onSSOAttempt={onSSOAttempt} /> 
-                        : <Button type="submit" onClick={(e) => {
+                        : <Button type="submit" onLoad={(e) => {
                             e.preventDefault();
                             onConnectionModalClose();
                             createConnection(protocol, url, port, database, username, password);

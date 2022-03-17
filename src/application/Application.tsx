@@ -58,6 +58,7 @@ const Application = ({ connection, connected, hasCachedDashboard, oldDashboard, 
                 createConnection={createConnection}
                 onSSOAttempt={onSSOAttempt}
                 onConnectionModalClose={onConnectionModalClose} ></NeoConnectionModal>
+
             <NeoWelcomeScreenModal
                 welcomeScreenOpen={welcomeScreenOpen}
                 setWelcomeScreenOpen={setWelcomeScreenOpen}
@@ -67,6 +68,7 @@ const Application = ({ connection, connected, hasCachedDashboard, oldDashboard, 
                 createConnectionFromDesktopIntegration={createConnectionFromDesktopIntegration}
                 onAboutModalOpen={onAboutModalOpen}
                 resetDashboard={resetDashboard}></NeoWelcomeScreenModal>
+
             <NeoUpgradeOldDashboardModal
                 open={oldDashboard}
                 text={oldDashboard}

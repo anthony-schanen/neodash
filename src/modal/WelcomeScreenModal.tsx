@@ -33,7 +33,7 @@ export const NeoWelcomeScreenModal = ({ welcomeScreenOpen, setWelcomeScreenOpen,
     return (
         <div>
             <Dialog maxWidth="xs" open={welcomeScreenOpen == true} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">NeoDash - Neo4j Dashboard Builder
+                <DialogTitle id="form-dialog-title">NeoDash TEST Neo4j Dashboard Builder
                     <IconButton disabled style={{ color: "white", padding: "5px", float: "right" }}>
                         ⚡
                     </IconButton>
