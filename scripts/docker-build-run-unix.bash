@@ -1,11 +1,11 @@
 # The port to expose NeoDash on.
 port=5005
 # Set `standalone=true`` to disable the editor, and create a 'fixed' dashboard view.
-standalone=false 
+standalone=true
 # If `standalone=true`, the protocol for the hardcoded database connection.
 standaloneProtocol='neo4j+s' 
 # If `standalone=true`, the hostname for the hardcoded database connection.
-standaloneHost='example.databases.neo4j.io' 
+standaloneHost='59025ed6.databases.neo4j.io'
 # If `standalone=true`, the port for the hardcoded database connection.
 standalonePort=7687 
 # If `standalone=true`, the database for the hardcoded database connection.
