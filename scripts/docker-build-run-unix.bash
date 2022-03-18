@@ -14,10 +14,11 @@ standaloneDatabase='neo4j'
 standaloneDashboardName='My Dashboard'
 # If `standalone=true`, the database name that the "to be loaded" dashboard is stored in. 
 standaloneDashboardDatabase='neo4j'
-
+standaloneUsername = 'neo4j'
+standalonePassword='EpsxmXeqMPVhuyVNlpU8dzMovtg0FIkB3s-9kwFq3Yk'
 # SSO settings. Experimental.
 ssoEnabled=false 
 ssoDiscoveryUrl='https://example.com'
 
-docker build --build-arg standalone=$standalone --build-arg ssoEnabled=$ssoEnabled --build-arg ssoDiscoveryUrl=$ssoDiscoveryUrl --build-arg standaloneProtocol=$standaloneProtocol --build-arg standaloneHost=$standaloneHost --build-arg standalonePort=$standalonePort --build-arg standaloneDatabase=$standaloneDatabase --build-arg standaloneDashboardName="${standaloneDashboardName}" --build-arg standaloneDashboardDatabase=$standaloneDashboardDatabase -t neodash .
+docker build --build-arg standalone=$standalone --build-arg ssoEnabled=$ssoEnabled --build-arg ssoDiscoveryUrl=$ssoDiscoveryUrl --build-arg standaloneProtocol=$standaloneProtocol --build-arg standaloneHost=$standaloneHost --build-arg standalonePort=$standalonePort --build-arg standaloneDatabase=$standaloneDatabase --build-arg standaloneDashboardName="${standaloneDashboardName}" --build-arg standaloneDashboardDatabase=$standaloneDashboardDatabase --build-arg standaloneUsername=$standaloneUsername --build-arg standalonePassword=$standalonePassword -t neodash .
 docker run -it --rm -p $port:5005 neodash

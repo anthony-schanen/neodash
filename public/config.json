@@ -2,10 +2,12 @@
     "ssoEnabled": false,
     "ssoDiscoveryUrl": "https://example.com",
     "standalone": false,
-    "standaloneProtocol": "neo4j",
-    "standaloneHost": "localhost",
+    "standaloneProtocol": "neo4j+s",
+    "standaloneHost": "59025ed6.databases.neo4j.io",
     "standalonePort": "7687",
     "standaloneDatabase": "neo4j",
     "standaloneDashboardName": "My Dashboard",
-    "standaloneDashboardDatabase": "dashboards"
+    "standaloneDashboardDatabase": "dashboards",
+    "standaloneUsername": "neo4j",
+    "standalonePassword" : "EpsxmXeqMPVhuyVNlpU8dzMovtg0FIkB3s-9kwFq3Yk"
 }

@@ -123,7 +123,7 @@ export default function NeoConnectionModal({ open, standalone, standaloneSetting
                             />}
                             label="Use SSO"></FormControlLabel> : <></>}
                         {ssoVisible ? <SSOLoginButton discoveryAPIUrl={discoveryAPIUrl} onSSOAttempt={onSSOAttempt} /> 
-                        : <Button type="submit" onLoad={(e) => {
+                        : <Button type="submit" onClick={(e) => {
                             e.preventDefault();
                             onConnectionModalClose();
                             createConnection(protocol, url, port, database, username, password);
