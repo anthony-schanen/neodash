@@ -8,6 +8,4 @@
     "standaloneDatabase": "neo4j",
     "standaloneDashboardName": "My Dashboard",
     "standaloneDashboardDatabase": "dashboards",
-    "standaloneUsername": "neo4j",
-    "standalonePassword" : "EpsxmXeqMPVhuyVNlpU8dzMovtg0FIkB3s-9kwFq3Yk"
 }
